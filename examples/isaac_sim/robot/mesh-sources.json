@@ -1,0 +1,137 @@
+{
+  "meshes/0b97b3aa9a4391b7_arm_link3.stl": {
+    "sha256": "0b97b3aa9a4391b7c21cdc75c1e00223f47a287fb0daafb1f7683b8c1198e9fd",
+    "size": 3345434,
+    "source_group": "cached_vendor_mesh"
+  },
+  "meshes/32c77252e6af8ed8_ld_stl_27l_lidar.stl": {
+    "sha256": "32c77252e6af8ed82ff7af63e7661d5e97f25e671b708d6f2cec57b3a1bfe420",
+    "size": 57984,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/339b66bce8ed4c2f_arm_link5.stl": {
+    "sha256": "339b66bce8ed4c2fa1bdc6b746177a8bc8373608dfe14cf8b0ba113eeb78e106",
+    "size": 579184,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/3963d05caf23d4b6_left_front_ultrasonic_link.stl": {
+    "sha256": "3963d05caf23d4b6481f32cbbc5f8ab1cdceffcb08a2af174be12e39e434ae13",
+    "size": 155084,
+    "source_group": "cached_vendor_mesh"
+  },
+  "meshes/564f2e9247e04482_arm_link1.stl": {
+    "sha256": "564f2e9247e04482584e893faf25cddba380151f5c5482bea48f613c8ad94ef7",
+    "size": 500484,
+    "source_group": "cached_vendor_mesh"
+  },
+  "meshes/5f457124271e9fe6_arm_link6.stl": {
+    "sha256": "5f457124271e9fe669fd15ce472b00415f6ad4436771564931c9abbf3a75c600",
+    "size": 76584,
+    "source_group": "cached_vendor_mesh"
+  },
+  "meshes/67cccbc12f96c6f0_head_yaw_link.stl": {
+    "sha256": "67cccbc12f96c6f0601097c08619151bb8a035af8ab4a070562c38235aa1034a",
+    "size": 242134,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/71e39c1beb131d52_arm_link2.stl": {
+    "sha256": "71e39c1beb131d52387ac4d82b1e93427f853bdedd2d7ee89b8e549e5c9c9f58",
+    "size": 3903834,
+    "source_group": "cached_vendor_mesh"
+  },
+  "meshes/7c9e544aee9c17a3_gripper_right_link.stl": {
+    "sha256": "7c9e544aee9c17a3af08047077ee7045e5a05ec9ed5e8b1823e2eb1a62040b70",
+    "size": 447184,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/81b6da9f15a78823_arm_link3.stl": {
+    "sha256": "81b6da9f15a7882352f198b4ecbf119345ed87a2b2c8797fa0209a8a72780332",
+    "size": 1067734,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/852ea1432ef0453e_gripper_left_link.stl": {
+    "sha256": "852ea1432ef0453eee4845892c92d8d754807b1b2817f9f7ab501c7aeb86a221",
+    "size": 449334,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/9198b52e9e7dcfe1_arm_link4.stl": {
+    "sha256": "9198b52e9e7dcfe144a5054eeeaeb256500cbd0d2ef3ab2891d23d471d9672b0",
+    "size": 959884,
+    "source_group": "cached_vendor_mesh"
+  },
+  "meshes/94ee07b12a6029b2_lift_link.stl": {
+    "sha256": "94ee07b12a6029b2425668a31a3fb7d007a757e571ece0f97bc2d9b568f91dc9",
+    "size": 1975534,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/9be244a1ab0a86f9_right_front_ultrasonic_link.stl": {
+    "sha256": "9be244a1ab0a86f90ebffd16738a436a5409793b9322a5e304a2b4f53d93a2de",
+    "size": 155084,
+    "source_group": "cached_vendor_mesh"
+  },
+  "meshes/9fea873ac6b175a9_head_pitch_link.stl": {
+    "sha256": "9fea873ac6b175a93c8679c8bba7aaa5ea468fc63dac21f20e1cc772093dbcd0",
+    "size": 907784,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/9ff665aad30b1323_arm_link2.stl": {
+    "sha256": "9ff665aad30b13238f79344fcee9d023dd3e27200ada5b4ca41e93ff88068a3d",
+    "size": 1167584,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/a9fd4b6cc59cdb9a_arm_link4.stl": {
+    "sha256": "a9fd4b6cc59cdb9a3fd95cf18631c0f083622ce724fa071a00defb97a19838c5",
+    "size": 409634,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/bbfba3b439a4ed9b_arm_link1.stl": {
+    "sha256": "bbfba3b439a4ed9ba927d1f963846e40b8b75daa9e9113b478c6f3d88b1f2fdc",
+    "size": 275184,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/ced48b8c6203fe37_lift_link.stl": {
+    "sha256": "ced48b8c6203fe37983145afb5f383113a10b2d79d5b311b153e03db28f2a298",
+    "size": 3324084,
+    "source_group": "cached_vendor_mesh"
+  },
+  "meshes/d50ed9e42d5694ad_right_wheel_link.stl": {
+    "sha256": "d50ed9e42d5694ad758c26eb8ae0889b835f7c1140b9c80abb6508bcc1e739ab",
+    "size": 1039284,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/dd451592050c77e2_left_wheel_link.stl": {
+    "sha256": "dd451592050c77e2ae4c211ca1b598ac70fe28329cefc9ced74563c93b168bec",
+    "size": 1041034,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/e5051c25e880cb29_arm_base_link.stl": {
+    "sha256": "e5051c25e880cb29751c7b2bed9f8cb21e9e0e4dac69159755633dc4fa3870a7",
+    "size": 276784,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/e5c8067549f11f06_right_rear_ultrasonic_link.stl": {
+    "sha256": "e5c8067549f11f0620420d94816d6432a8a74a13af87c646317c78097739113d",
+    "size": 155084,
+    "source_group": "cached_vendor_mesh"
+  },
+  "meshes/ebedb6667751be19_chassis_base_link.stl": {
+    "sha256": "ebedb6667751be1911e28e94ebc00d93228170e47a7fc761ff7aa8d107f61557",
+    "size": 25184,
+    "source_group": "cached_vendor_mesh"
+  },
+  "meshes/f8e57705009ee5cd_left_rear_ultrasonic_link.stl": {
+    "sha256": "f8e57705009ee5cd36d181a3c85050fbe6e90fe165baee0eb55e7d125dd9ccc7",
+    "size": 155084,
+    "source_group": "cached_vendor_mesh"
+  },
+  "meshes/fd371625076ef8a7_gripper_base_link.stl": {
+    "sha256": "fd371625076ef8a71b06c14361a8ab7e933c4cd6100a48284efb2413b42f6a95",
+    "size": 866234,
+    "source_group": "old_d1_decimated_visual"
+  },
+  "meshes/ff8b8270e62816f5_arm_link5.stl": {
+    "sha256": "ff8b8270e62816f5b89b324eed200bd476e646ffa5ea2b4ed74ab41a7845be89",
+    "size": 3058384,
+    "source_group": "cached_vendor_mesh"
+  }
+}

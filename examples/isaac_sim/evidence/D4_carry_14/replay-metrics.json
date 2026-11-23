@@ -1,0 +1,14 @@
+{
+  "native_run": "D4_carry_14",
+  "frames": 1265,
+  "fps": 25,
+  "video_sha256": "ba3757ea31747929dff9e452c96bdfb8f051f7fb87d455445cfef607c75bbae1",
+  "raw_video_sha256": "d02dc7ddf0905624c76184663c07753e39ea0f672aa2f7772e3c992d0378a7ca",
+  "urdf_sha256": "b9d65ec1d29897c394d9775902dbb4ec8b0b3ec88f4d9779b77e01b6bb9063c3",
+  "max_frame_mean_abs_rgb_change_right_panels_0_255": 1.3135894097222223,
+  "mean_abs_rgb_change_right_panels_0_255": 1.1690882277256256,
+  "max_per_frame_fraction_rgb_changes_over_15": 0.00036458333333333335,
+  "max_wrist_fk_vs_recorded_position_mm": 2.326341149472307e-13,
+  "material_nodes_per_frame": 225,
+  "panels": "The exterior view is reconstructed only from the recorded joint encoders and simulated textile nodes. Right panels are the two original RGB views re-encoded into this presentation clip."
+}

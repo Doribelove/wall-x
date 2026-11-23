@@ -1,0 +1,1105 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.3"
+    }
+    defaultPrim = "ex001_robot"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "ex001_robot"
+{
+    over "Physics"
+    {
+        def MjcActuator "right_wheel_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/right_wheel_joint>
+        }
+
+        def MjcActuator "left_wheel_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/left_wheel_joint>
+        }
+
+        def MjcActuator "lift_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2000
+            uniform double mjc:forceRange:min = -2000
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/lift_joint>
+        }
+
+        def MjcActuator "head_yaw_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 9
+            uniform double mjc:forceRange:min = -9
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/head_yaw_joint>
+        }
+
+        def MjcActuator "head_pitch_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 9
+            uniform double mjc:forceRange:min = -9
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/head_pitch_joint>
+        }
+
+        def MjcActuator "left_arm_joint1_actuator"
+        {
+            uniform double mjc:forceRange:max = 30
+            uniform double mjc:forceRange:min = -30
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/left_arm_joint1>
+        }
+
+        def MjcActuator "left_arm_joint2_actuator"
+        {
+            uniform double mjc:forceRange:max = 30
+            uniform double mjc:forceRange:min = -30
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/left_arm_joint2>
+        }
+
+        def MjcActuator "left_arm_joint3_actuator"
+        {
+            uniform double mjc:forceRange:max = 30
+            uniform double mjc:forceRange:min = -30
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/left_arm_joint3>
+        }
+
+        def MjcActuator "left_arm_joint4_actuator"
+        {
+            uniform double mjc:forceRange:max = 9
+            uniform double mjc:forceRange:min = -9
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/left_arm_joint4>
+        }
+
+        def MjcActuator "left_arm_joint5_actuator"
+        {
+            uniform double mjc:forceRange:max = 9
+            uniform double mjc:forceRange:min = -9
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/left_arm_joint5>
+        }
+
+        def MjcActuator "left_arm_joint6_actuator"
+        {
+            uniform double mjc:forceRange:max = 9
+            uniform double mjc:forceRange:min = -9
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/left_arm_joint6>
+        }
+
+        def MjcActuator "right_arm_joint1_actuator"
+        {
+            uniform double mjc:forceRange:max = 30
+            uniform double mjc:forceRange:min = -30
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/right_arm_joint1>
+        }
+
+        def MjcActuator "right_arm_joint2_actuator"
+        {
+            uniform double mjc:forceRange:max = 30
+            uniform double mjc:forceRange:min = -30
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/right_arm_joint2>
+        }
+
+        def MjcActuator "right_arm_joint3_actuator"
+        {
+            uniform double mjc:forceRange:max = 30
+            uniform double mjc:forceRange:min = -30
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/right_arm_joint3>
+        }
+
+        def MjcActuator "right_arm_joint4_actuator"
+        {
+            uniform double mjc:forceRange:max = 9
+            uniform double mjc:forceRange:min = -9
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/right_arm_joint4>
+        }
+
+        def MjcActuator "right_arm_joint5_actuator"
+        {
+            uniform double mjc:forceRange:max = 9
+            uniform double mjc:forceRange:min = -9
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/right_arm_joint5>
+        }
+
+        def MjcActuator "right_arm_joint6_actuator"
+        {
+            uniform double mjc:forceRange:max = 9
+            uniform double mjc:forceRange:min = -9
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/right_arm_joint6>
+        }
+
+        def MjcActuator "left_arm_gripper_actuator"
+        {
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/left_arm_gripper>
+        }
+
+        def MjcActuator "left_arm_gripper_left_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 20
+            uniform double mjc:forceRange:min = -20
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/left_arm_gripper_left_joint>
+        }
+
+        def MjcActuator "left_arm_gripper_right_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 20
+            uniform double mjc:forceRange:min = -20
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/left_arm_gripper_right_joint>
+        }
+
+        def MjcActuator "right_arm_gripper_actuator"
+        {
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/right_arm_gripper>
+        }
+
+        def MjcActuator "right_arm_gripper_left_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 20
+            uniform double mjc:forceRange:min = -20
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/right_arm_gripper_left_joint>
+        }
+
+        def MjcActuator "right_arm_gripper_right_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 20
+            uniform double mjc:forceRange:min = -20
+            custom rel mjc:target
+            prepend rel mjc:target = </ex001_robot/Physics/right_arm_gripper_right_joint>
+        }
+
+        over "chassis_base_joint"
+        {
+        }
+
+        over "right_wheel_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "left_wheel_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "lift_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+
+        over "head_yaw_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "head_pitch_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "left_arm_frame_joint"
+        {
+        }
+
+        over "right_arm_frame_joint"
+        {
+        }
+
+        over "head_camera_connector"
+        {
+        }
+
+        over "chest_lh_camera_base_joint"
+        {
+        }
+
+        over "chest_lh_camera_color_frame_joint"
+        {
+        }
+
+        over "right_tof_joint"
+        {
+        }
+
+        over "left_tof_joint"
+        {
+        }
+
+        over "left_front_ultrasonic_joint"
+        {
+        }
+
+        over "left_rear_ultrasonic_joint"
+        {
+        }
+
+        over "right_front_ultrasonic_joint"
+        {
+        }
+
+        over "right_rear_ultrasonic_joint"
+        {
+        }
+
+        over "tn__2d_laser_link_connector_"
+        {
+        }
+
+        over "tn__3d_laser_link_connector_"
+        {
+        }
+
+        over "base_front_camera_connector"
+        {
+        }
+
+        over "left_up_camera_base_joint"
+        {
+        }
+
+        over "left_up_camera_color_frame_joint"
+        {
+        }
+
+        over "right_up_camera_base_joint"
+        {
+        }
+
+        over "right_up_camera_color_frame_joint"
+        {
+        }
+
+        over "imu_joint"
+        {
+        }
+
+        over "left_arm_joint1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "left_arm_joint2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "left_arm_joint3" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "left_arm_joint4" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "left_arm_joint5" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "left_arm_joint6" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_arm_joint1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_arm_joint2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_arm_joint3" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_arm_joint4" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_arm_joint5" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_arm_joint6" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "left_arm_connector"
+        {
+        }
+
+        over "right_arm_connector"
+        {
+        }
+
+        over "left_arm_gripper" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "left_arm_gripper_left_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+
+        over "left_arm_gripper_right_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+
+        over "left_arm_gripper_camera_base_joint"
+        {
+        }
+
+        over "left_arm_gripper_camera_color_frame_joint"
+        {
+        }
+
+        over "left_gripper_connector"
+        {
+        }
+
+        over "right_arm_gripper" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "right_arm_gripper_left_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+
+        over "right_arm_gripper_right_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+
+        over "right_arm_gripper_camera_base_joint"
+        {
+        }
+
+        over "right_arm_gripper_camera_color_frame_joint"
+        {
+        }
+
+        over "right_gripper_connector"
+        {
+        }
+
+        over "camera_head_front_joint"
+        {
+        }
+
+        over "camera_head_front_right_IR_frame_joint"
+        {
+        }
+
+        over "camera_head_front_infra2_optical_frame_joint"
+        {
+        }
+
+        over "camera_head_front_left_IR_ROS_frame_joint"
+        {
+        }
+
+        over "camera_head_front_infra1_optical_frame_joint"
+        {
+        }
+
+        over "camera_head_front_RGB_IR_ROS_frame_joint"
+        {
+        }
+
+        over "camera_head_front_color_optical_frame_joint"
+        {
+        }
+
+        over "camera_head_front_USB_frame_joint"
+        {
+        }
+
+        over "camera_head_front_depth_frame_joint"
+        {
+        }
+
+        over "camera_head_front_depth_optical_frame_joint"
+        {
+        }
+
+        over "head_front_camera_connector"
+        {
+        }
+
+        over "camera_chassis_front_bottom_screw_frame_joint"
+        {
+        }
+
+        over "camera_chassis_front_infra1_frame_joint"
+        {
+        }
+
+        over "camera_chassis_front_infra1_optical_frame_joint"
+        {
+        }
+
+        over "camera_chassis_front_infra2_frame_joint"
+        {
+        }
+
+        over "camera_chassis_front_infra2_optical_frame_joint"
+        {
+        }
+
+        over "camera_chassis_front_color_frame_joint"
+        {
+        }
+
+        over "camera_chassis_front_color_optical_frame_joint"
+        {
+        }
+
+        over "camera_chassis_front_depth_frame_joint"
+        {
+        }
+
+        over "camera_chassis_front_depth_optical_frame_joint"
+        {
+        }
+
+        over "chassis_front_camera_connector"
+        {
+        }
+
+        over "tn__2d_laser_joint_"
+        {
+        }
+
+        over "laser_connector"
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "base_link"
+        {
+            over "chassis_base_link"
+            {
+                over "right_wheel_link"
+                {
+                }
+
+                over "left_wheel_link"
+                {
+                }
+
+                over "lift_link"
+                {
+                    over "head_yaw_link"
+                    {
+                        over "head_pitch_link"
+                        {
+                            over "head_camera_frame_link"
+                            {
+                                over "camera_head_front_bottom_screw_frame"
+                                {
+                                    over "camera_head_front_link"
+                                    {
+                                        over "camera_head_front_infra2_frame"
+                                        {
+                                            over "camera_head_front_infra2_optical_frame"
+                                            {
+                                                over "box"
+                                                {
+                                                }
+                                            }
+                                        }
+
+                                        over "camera_head_front_infra1_frame"
+                                        {
+                                            over "camera_head_front_infra1_optical_frame"
+                                            {
+                                                over "box"
+                                                {
+                                                }
+                                            }
+                                        }
+
+                                        over "camera_head_front_color_frame"
+                                        {
+                                            over "camera_head_front_color_optical_frame"
+                                            {
+                                                over "box"
+                                                {
+                                                }
+                                            }
+                                        }
+
+                                        over "camera_head_front_depth_frame"
+                                        {
+                                            over "camera_head_front_depth_optical_frame"
+                                            {
+                                                over "box"
+                                                {
+                                                }
+                                            }
+                                        }
+
+                                        over "camera_head_front_USB_frame"
+                                        {
+                                        }
+                                    }
+                                }
+
+                                over "box"
+                                {
+                                }
+                            }
+
+                            over "tn__9fea873ac6b175a9_head_pitch_link_"
+                            {
+                            }
+                        }
+
+                        over "tn__67cccbc12f96c6f0_head_yaw_link_"
+                        {
+                        }
+                    }
+
+                    over "left_arm_frame_link"
+                    {
+                        over "left_arm_base_link"
+                        {
+                            over "left_arm_link1"
+                            {
+                                over "left_arm_link2"
+                                {
+                                    over "left_arm_link3"
+                                    {
+                                        over "left_arm_link4"
+                                        {
+                                            over "left_arm_link5"
+                                            {
+                                                over "left_arm_link6"
+                                                {
+                                                    over "left_arm_gripper_base_link"
+                                                    {
+                                                        over "left_arm_gripper_motor_link"
+                                                        {
+                                                            over "box"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "left_arm_gripper_left_link"
+                                                        {
+                                                            over "tn__852ea1432ef0453e_gripper_left_link_"
+                                                            {
+                                                            }
+
+                                                            over "box"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "left_arm_gripper_right_link"
+                                                        {
+                                                            over "tn__7c9e544aee9c17a3_gripper_right_link_"
+                                                            {
+                                                            }
+
+                                                            over "box"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "left_arm_gripper_camera_base_link"
+                                                        {
+                                                            over "left_arm_gripper_camera_color_frame"
+                                                            {
+                                                                over "box"
+                                                                {
+                                                                }
+                                                            }
+                                                        }
+
+                                                        over "fd371625076ef8a7_gripper_base_link"
+                                                        {
+                                                        }
+
+                                                        over "box"
+                                                        {
+                                                        }
+                                                    }
+
+                                                    over "tn__5f457124271e9fe6_arm_link6_"
+                                                    {
+                                                    }
+
+                                                    over "tn__5f457124271e9fe6_arm_link6_1_"
+                                                    {
+                                                    }
+                                                }
+
+                                                over "tn__339b66bce8ed4c2f_arm_link5_"
+                                                {
+                                                }
+
+                                                over "ff8b8270e62816f5_arm_link5"
+                                                {
+                                                }
+                                            }
+
+                                            over "a9fd4b6cc59cdb9a_arm_link4"
+                                            {
+                                            }
+
+                                            over "tn__9198b52e9e7dcfe1_arm_link4_"
+                                            {
+                                            }
+                                        }
+
+                                        over "tn__81b6da9f15a78823_arm_link3_"
+                                        {
+                                        }
+
+                                        over "tn__0b97b3aa9a4391b7_arm_link3_"
+                                        {
+                                        }
+                                    }
+
+                                    over "tn__9ff665aad30b1323_arm_link2_"
+                                    {
+                                    }
+
+                                    over "tn__71e39c1beb131d52_arm_link2_"
+                                    {
+                                    }
+                                }
+
+                                over "bbfba3b439a4ed9b_arm_link1"
+                                {
+                                }
+
+                                over "tn__564f2e9247e04482_arm_link1_"
+                                {
+                                }
+                            }
+
+                            over "e5051c25e880cb29_arm_base_link"
+                            {
+                            }
+                        }
+
+                        over "box"
+                        {
+                        }
+                    }
+
+                    over "right_arm_frame_link"
+                    {
+                        over "right_arm_base_link"
+                        {
+                            over "right_arm_link1"
+                            {
+                                over "right_arm_link2"
+                                {
+                                    over "right_arm_link3"
+                                    {
+                                        over "right_arm_link4"
+                                        {
+                                            over "right_arm_link5"
+                                            {
+                                                over "right_arm_link6"
+                                                {
+                                                    over "right_arm_gripper_base_link"
+                                                    {
+                                                        over "right_arm_gripper_motor_link"
+                                                        {
+                                                            over "box"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "right_arm_gripper_left_link"
+                                                        {
+                                                            over "tn__852ea1432ef0453e_gripper_left_link_"
+                                                            {
+                                                            }
+
+                                                            over "box"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "right_arm_gripper_right_link"
+                                                        {
+                                                            over "tn__7c9e544aee9c17a3_gripper_right_link_"
+                                                            {
+                                                            }
+
+                                                            over "box"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "right_arm_gripper_camera_base_link"
+                                                        {
+                                                            over "right_arm_gripper_camera_color_frame"
+                                                            {
+                                                                over "box"
+                                                                {
+                                                                }
+                                                            }
+                                                        }
+
+                                                        over "fd371625076ef8a7_gripper_base_link"
+                                                        {
+                                                        }
+
+                                                        over "box"
+                                                        {
+                                                        }
+                                                    }
+
+                                                    over "tn__5f457124271e9fe6_arm_link6_"
+                                                    {
+                                                    }
+
+                                                    over "tn__5f457124271e9fe6_arm_link6_1_"
+                                                    {
+                                                    }
+                                                }
+
+                                                over "tn__339b66bce8ed4c2f_arm_link5_"
+                                                {
+                                                }
+
+                                                over "ff8b8270e62816f5_arm_link5"
+                                                {
+                                                }
+                                            }
+
+                                            over "a9fd4b6cc59cdb9a_arm_link4"
+                                            {
+                                            }
+
+                                            over "tn__9198b52e9e7dcfe1_arm_link4_"
+                                            {
+                                            }
+                                        }
+
+                                        over "tn__81b6da9f15a78823_arm_link3_"
+                                        {
+                                        }
+
+                                        over "tn__0b97b3aa9a4391b7_arm_link3_"
+                                        {
+                                        }
+                                    }
+
+                                    over "tn__9ff665aad30b1323_arm_link2_"
+                                    {
+                                    }
+
+                                    over "tn__71e39c1beb131d52_arm_link2_"
+                                    {
+                                    }
+                                }
+
+                                over "bbfba3b439a4ed9b_arm_link1"
+                                {
+                                }
+
+                                over "tn__564f2e9247e04482_arm_link1_"
+                                {
+                                }
+                            }
+
+                            over "e5051c25e880cb29_arm_base_link"
+                            {
+                            }
+                        }
+
+                        over "box"
+                        {
+                        }
+                    }
+
+                    over "chest_lh_camera_base_link"
+                    {
+                        over "chest_lh_camera_color_frame"
+                        {
+                        }
+                    }
+
+                    over "tn__94ee07b12a6029b2_lift_link_"
+                    {
+                    }
+
+                    over "ced48b8c6203fe37_lift_link"
+                    {
+                    }
+                }
+
+                over "left_front_ultrasonic_link"
+                {
+                }
+
+                over "left_rear_ultrasonic_link"
+                {
+                }
+
+                over "right_front_ultrasonic_link"
+                {
+                }
+
+                over "right_rear_ultrasonic_link"
+                {
+                }
+
+                over "tn__2d_laser_link_"
+                {
+                    over "tn__2d_laser_base_"
+                    {
+                        over "tn__2d_laser_"
+                        {
+                            over "box"
+                            {
+                            }
+                        }
+
+                        over "tn__32c77252e6af8ed8_ld_stl_27l_lidar_"
+                        {
+                        }
+                    }
+
+                    over "box"
+                    {
+                    }
+                }
+
+                over "tn__3d_laser_link_"
+                {
+                    over "box"
+                    {
+                    }
+                }
+
+                over "base_front_camera_frame_link"
+                {
+                    over "camera_chassis_front_link"
+                    {
+                        over "camera_chassis_front_bottom_screw_frame"
+                        {
+                            over "camera_chassis_front_infra1_frame"
+                            {
+                                over "camera_chassis_front_infra1_optical_frame"
+                                {
+                                }
+                            }
+
+                            over "camera_chassis_front_infra2_frame"
+                            {
+                                over "camera_chassis_front_infra2_optical_frame"
+                                {
+                                }
+                            }
+
+                            over "camera_chassis_front_color_frame"
+                            {
+                                over "camera_chassis_front_color_optical_frame"
+                                {
+                                }
+                            }
+
+                            over "camera_chassis_front_depth_frame"
+                            {
+                                over "camera_chassis_front_depth_optical_frame"
+                                {
+                                }
+                            }
+                        }
+                    }
+
+                    over "box"
+                    {
+                    }
+                }
+
+                over "imu_link"
+                {
+                    over "box"
+                    {
+                    }
+                }
+
+                over "right_tof_link"
+                {
+                }
+
+                over "left_tof_link"
+                {
+                }
+
+                over "left_up_camera_base_link"
+                {
+                    over "left_up_camera_color_frame"
+                    {
+                    }
+                }
+
+                over "right_up_camera_base_link"
+                {
+                    over "right_up_camera_color_frame"
+                    {
+                    }
+                }
+
+                over "ebedb6667751be19_chassis_base_link"
+                {
+                }
+
+                over "box"
+                {
+                }
+            }
+        }
+    }
+
+    over "Materials"
+    {
+        over "material_9"
+        {
+        }
+
+        over "material_42"
+        {
+        }
+
+        over "material_43"
+        {
+        }
+
+        over "material_44"
+        {
+        }
+
+        over "material_45"
+        {
+        }
+
+        over "material_7"
+        {
+        }
+
+        over "material_33"
+        {
+        }
+
+        over "material_36"
+        {
+        }
+
+        over "material_8"
+        {
+        }
+
+        over "material_38"
+        {
+        }
+
+        over "material_41"
+        {
+        }
+
+        over "material_14"
+        {
+        }
+
+        over "material_47"
+        {
+        }
+
+        over "material_15"
+        {
+        }
+
+        over "material_16"
+        {
+        }
+
+        over "material_17"
+        {
+        }
+    }
+
+    over "VisualMaterials"
+    {
+    }
+}
+

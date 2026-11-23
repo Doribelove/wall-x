@@ -1,0 +1,19 @@
+{
+  "run_id": "D1_native",
+  "task": "D1",
+  "prompt": "Place the two ordered red cubes into the yellow bowl in sequence. Put the specified blue cube into the mint bowl and deliver that bowl.",
+  "fixture_sha256": "a80cff6fcde0e38ab5a1b5ec19b9d6dac7172221d3db1a9c27ee223a5484bc6a",
+  "control": "Bimanual stock WALL-OSS-0.5 output, capped differential IK with force-limited position drives. Fixed base, lift and head.",
+  "simulated_seconds": 48.0,
+  "model_calls": 150,
+  "wrist_travel_m": {
+    "left": 3.1418702780847516,
+    "right": 5.148452506005637
+  },
+  "target_xy_distance_to_bowl_mm": {
+    "red2": 127.63219727243089,
+    "red0": 127.31836326637261,
+    "blue4": 249.47933291842688
+  },
+  "targets_in_correct_bowls": 0
+}

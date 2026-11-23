@@ -1,0 +1,515 @@
+{
+  "task": "D1",
+  "title": "按订单分装教具并交付载料碗",
+  "prompt": "Put the red cube on the right and then the red cube on the left in the yellow bowl. Put the blue cube on the right in the mint bowl and deliver it.",
+  "run_id": "D1_task_02",
+  "model_calls": 66,
+  "frames": 529,
+  "control": "Task-space servo using simulated initial object coordinates, gripper and wrist feedback, plus capped WALL-OSS right-hand position residual.",
+  "physics_engine": "PhysX",
+  "physical_scene": "EX001 V6 collision/visual proxy, native task props",
+  "control_period_s": 0.04,
+  "execution_rows_per_chunk": 8,
+  "max_chunks": 225,
+  "camera_inputs": [
+    "face_view",
+    "right_wrist_view"
+  ],
+  "unverified_official_score": true,
+  "isaac_version": [
+    "6.0.1",
+    "rc.7",
+    "6",
+    "0",
+    "1",
+    "rc",
+    "7",
+    "release.42383.32955d8d.gl"
+  ],
+  "mode": "assisted",
+  "grasp_mode": "opposed physical friction pads",
+  "dt": 0.004,
+  "fixture_sha256": "8d60e3ff271570ade1bbc7d91c0d7bd088738fba5f0eaaea36f39d9364c36ca7",
+  "robot_usd_sha256": "0a5118c799b7fc5012bf4c31b27d32f3910e5edbdba53ab32c3d1b646faf0ff2",
+  "start_joints": [
+    -0.6370184421539307,
+    1.5149879455566406,
+    -0.8880290985107422,
+    0.9528191685676575,
+    -2.5060231564566493e-05,
+    0.9338175654411316,
+    0.212640643119812,
+    1.2810124158859253,
+    -0.38580989837646484,
+    0.6819131970405579,
+    -1.8872003693104489e-06,
+    1.7834360599517822,
+    0.0270057525485754,
+    -0.02699417620897293,
+    0.02700447291135788,
+    -0.02699546329677105,
+    0.37997978925704956,
+    -0.40005984902381897,
+    0.8602484464645386
+  ],
+  "sim_start_tick": 127,
+  "native_5756_wrist": true,
+  "command_channels": 16,
+  "scene_asset": "D1_A_fixtures.usda",
+  "joint_names": [
+    "left_arm_joint1",
+    "left_arm_joint2",
+    "left_arm_joint3",
+    "left_arm_joint4",
+    "left_arm_joint5",
+    "left_arm_joint6",
+    "right_arm_joint1",
+    "right_arm_joint2",
+    "right_arm_joint3",
+    "right_arm_joint4",
+    "right_arm_joint5",
+    "right_arm_joint6",
+    "left_arm_gripper_left_joint",
+    "left_arm_gripper_right_joint",
+    "right_arm_gripper_left_joint",
+    "right_arm_gripper_right_joint",
+    "lift_joint",
+    "head_yaw_joint",
+    "head_pitch_joint"
+  ],
+  "initial_props": {
+    "red0": [
+      [
+        0.3360000252723694,
+        -0.23200002312660217,
+        0.6419999599456787
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "red1": [
+      [
+        0.362000048160553,
+        -0.2879999279975891,
+        0.6420000195503235
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "red2": [
+      [
+        0.3810000717639923,
+        -0.3519999384880066,
+        0.6420000195503235
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "blue3": [
+      [
+        0.4310000240802765,
+        -0.22200003266334534,
+        0.6419999599456787
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "blue4": [
+      [
+        0.432000070810318,
+        -0.34999993443489075,
+        0.6420000195503235
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "green5": [
+      [
+        0.3550000488758087,
+        -0.40599992871284485,
+        0.6420000195503235
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "mint": [
+      [
+        0.5329999327659607,
+        -0.28099995851516724,
+        0.6329999566078186
+      ],
+      [
+        0.9986295104026794,
+        -3.3650329811920395e-24,
+        4.656614202358144e-09,
+        0.05233642090270147
+      ]
+    ],
+    "yellow": [
+      [
+        0.5450000166893005,
+        -0.15399999916553497,
+        0.6329998970031738
+      ],
+      [
+        0.9990482330322266,
+        3.286000562861645e-24,
+        -4.307361217195428e-09,
+        -0.04361912510798344
+      ]
+    ]
+  },
+  "phase_events": [
+    {
+      "phase": "red2_align",
+      "physics_s": 0.72,
+      "position_error_m": 0.001898490881876942,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red2_descend",
+      "physics_s": 1.4000000000000001,
+      "position_error_m": 0.00037498051442893377,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red2_grip",
+      "physics_s": 2.12,
+      "position_error_m": 0.00024248532357345695,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red2_lift",
+      "physics_s": 2.72,
+      "position_error_m": 0.0019302092225464782,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red2_transfer",
+      "physics_s": 3.7600000000000002,
+      "position_error_m": 0.0023218531042094024,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red2_lower",
+      "physics_s": 4.24,
+      "position_error_m": 0.00019390728982872658,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red2_release",
+      "physics_s": 4.8,
+      "position_error_m": 0.0002133492741040463,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red2_withdraw",
+      "physics_s": 5.24,
+      "position_error_m": 0.0022771756857227973,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red0_align",
+      "physics_s": 6.16,
+      "position_error_m": 0.0010391505767867962,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red0_descend",
+      "physics_s": 6.84,
+      "position_error_m": 0.00039958791066675486,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red0_grip",
+      "physics_s": 7.5600000000000005,
+      "position_error_m": 0.00032074793498541767,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red0_lift",
+      "physics_s": 8.16,
+      "position_error_m": 0.0015543268443004646,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red0_transfer",
+      "physics_s": 9.200000000000001,
+      "position_error_m": 0.002002273923342696,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red0_lower",
+      "physics_s": 9.68,
+      "position_error_m": 0.0002622050927027219,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red0_release",
+      "physics_s": 10.24,
+      "position_error_m": 0.00020215038046020385,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "red0_withdraw",
+      "physics_s": 10.68,
+      "position_error_m": 0.002413941971606543,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "blue4_align",
+      "physics_s": 11.68,
+      "position_error_m": 0.002030639936650765,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "blue4_descend",
+      "physics_s": 12.36,
+      "position_error_m": 0.0004055369137343763,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "blue4_grip",
+      "physics_s": 13.08,
+      "position_error_m": 0.0002840333445326331,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "blue4_lift",
+      "physics_s": 13.68,
+      "position_error_m": 0.0013982303487431829,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "blue4_transfer",
+      "physics_s": 14.32,
+      "position_error_m": 0.0011524743542596898,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "blue4_lower",
+      "physics_s": 14.8,
+      "position_error_m": 0.00032918935833497576,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "blue4_release",
+      "physics_s": 15.36,
+      "position_error_m": 0.0002624436057979642,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "blue4_withdraw",
+      "physics_s": 15.8,
+      "position_error_m": 0.0016497910978584074,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "bowl_align",
+      "physics_s": 16.240000000000002,
+      "position_error_m": 0.002073413843410759,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "bowl_descend",
+      "physics_s": 16.96,
+      "position_error_m": 0.00036926860008792555,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "bowl_grip",
+      "physics_s": 17.76,
+      "position_error_m": 0.00021928033569403323,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "bowl_lift",
+      "physics_s": 18.12,
+      "position_error_m": 0.0004993509310102929,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "bowl_deliver",
+      "physics_s": 18.88,
+      "position_error_m": 0.0023106866808758533,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "bowl_setdown",
+      "physics_s": 19.48,
+      "position_error_m": 0.0005419094450684821,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "bowl_release",
+      "physics_s": 20.04,
+      "position_error_m": 0.00026456111861642605,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "retreat",
+      "physics_s": 20.96,
+      "position_error_m": 0.0016526607420047688,
+      "outcome": "arrived"
+    }
+  ],
+  "grasp_events": [],
+  "status": "horizon_reached",
+  "simulated_seconds": 21.12,
+  "final_props": {
+    "red0": [
+      [
+        0.5616998076438904,
+        -0.1540662944316864,
+        0.6480000615119934
+      ],
+      [
+        0.9999994039535522,
+        5.157205161781956e-07,
+        -5.59312973959179e-07,
+        -0.0010918296393841811
+      ]
+    ],
+    "red1": [
+      [
+        0.362000048160553,
+        -0.2879999279975891,
+        0.6420000195503235
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "red2": [
+      [
+        0.5285068154335022,
+        -0.1543678641319275,
+        0.6480000615119934
+      ],
+      [
+        0.9999861717224121,
+        4.402340140957266e-07,
+        -4.3360743496569574e-07,
+        -0.005258931790078552
+      ]
+    ],
+    "blue3": [
+      [
+        0.4310000240802765,
+        -0.22200003266334534,
+        0.6419999599456787
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "blue4": [
+      [
+        0.5433447957038879,
+        -0.4009091556072235,
+        0.6479999423027039
+      ],
+      [
+        0.9991744160652161,
+        -3.3319363930316154e-08,
+        -1.025345653632841e-07,
+        -0.040626177284146164
+      ]
+    ],
+    "green5": [
+      [
+        0.3550000488758087,
+        -0.40599992871284485,
+        0.6420000195503235
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "mint": [
+      [
+        0.5422344207763672,
+        -0.4012370705604553,
+        0.6329999566078186
+      ],
+      [
+        0.9995551705360413,
+        -5.5877570409079984e-09,
+        -1.175757210691058e-08,
+        0.029823833668147108
+      ]
+    ],
+    "yellow": [
+      [
+        0.5450000762939453,
+        -0.15399999916553497,
+        0.6329999566078186
+      ],
+      [
+        0.9990482330322266,
+        3.9115493810311314e-08,
+        -5.098984014558439e-08,
+        -0.043619125107936314
+      ]
+    ]
+  },
+  "wrist_travel_m": {
+    "left": 0.03134854689543693,
+    "right": 2.6763644384158782
+  },
+  "final_joints": [
+    -0.6370184421539307,
+    1.5108040571212769,
+    -0.8843819499015808,
+    0.9447058439254761,
+    -2.5853935312625254e-06,
+    0.9337809681892395,
+    -0.5152139067649841,
+    2.174236536026001,
+    -1.790823221206665,
+    1.1878612041473389,
+    6.256663255044259e-06,
+    1.055517315864563,
+    0.02600078284740448,
+    -0.02599923126399517,
+    0.03301026299595833,
+    -0.032989587634801865,
+    0.37996986508369446,
+    -0.40006983280181885,
+    0.8603214621543884
+  ],
+  "encoder_rc": 0
+}

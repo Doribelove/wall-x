@@ -1,0 +1,52 @@
+--- a/wall_x/model/core/attention/joint.py
++++ b/wall_x/model/core/attention/joint.py
+@@ -2,7 +2,6 @@
+ 
+ import torch
+ import torch.nn as nn
+-from flash_attn import flash_attn_func
+ from transformers.cache_utils import Cache
+ from transformers.modeling_flash_attention_utils import (
+     is_flash_attn_greater_or_equal_2_10,
+@@ -640,6 +639,7 @@
+             key_states = key_states.to(target_dtype)
+             value_states = value_states.to(target_dtype)
+ 
++        from flash_attn import flash_attn_func
+         attn_output = flash_attn_func(
+             query_states,
+             key_states,
+--- a/wall_x/model/qact/qwen2_5/modeling_qwen2_5_vl.py
++++ b/wall_x/model/qact/qwen2_5/modeling_qwen2_5_vl.py
+@@ -97,7 +97,7 @@
+     # Align intermediate_size to this value for cuBLAS GEMM tile efficiency.
+     # E.g. 3420 -> 3456 (= 128 * 27), improving MFU from 34.8% to ~60%+.
+     # Zero-padded weights don't affect forward output or gradient flow.
+-    _GEMM_ALIGN = 128
++    _GEMM_ALIGN = 1
+ 
+     def __init__(self, config, bias=False, use_selective_recompute=False):
+         super().__init__()
+@@ -524,6 +524,7 @@
+         self,
+         hidden_states: torch.Tensor,
+         cu_seqlens: torch.Tensor,
++        max_seqlen: Optional[int] = None,
+         rotary_pos_emb: Optional[torch.Tensor] = None,
+         position_embeddings: Optional[Tuple[torch.Tensor, torch.Tensor]] = None,
+     ) -> torch.Tensor:
+--- a/wall_x/_vendor/harrix/serving/_wallx_infer/model_wrapper.py
++++ b/wall_x/_vendor/harrix/serving/_wallx_infer/model_wrapper.py
+@@ -118,7 +118,11 @@
+         self.model_type = model_type
+ 
+         self.logger.info("resizing model token embeddings")
+-        self.model.resize_token_embeddings(len(self.processor.tokenizer))
++        from safetensors import safe_open
++        with safe_open(os.path.join(self.config.checkpoint_path, 'model.safetensors'), framework='pt') as archive:
++            rows = archive.get_slice('model.embed_tokens.weight').get_shape()[0]
++        assert len(self.processor.tokenizer) <= rows
++        self.model.resize_token_embeddings(rows)
+         self.logger.info("token embedding resize done")
+         self.logger.info("casting selected params to bfloat16")
+         self.model.to_bfloat16_for_selected_params()

@@ -1,0 +1,493 @@
+#usda 1.0
+(
+ defaultPrim = "World"
+ upAxis = "Z"
+ metersPerUnit = 1
+ kilogramsPerUnit = 1
+)
+def Xform "World"
+{
+  
+  def PhysicsScene "Physics" (
+   prepend apiSchemas = ["PhysxSceneAPI"]
+  )
+  {
+    vector3f physics:gravityDirection = (0,0,-1)
+    float physics:gravityMagnitude = 9.81
+    uint physxScene:timeStepsPerSecond = 1250
+    bool physxScene:enableGPUDynamics = false
+    bool physxScene:enableCCD = true
+    token physxScene:solverType = "TGS"
+    float physxScene:frictionOffsetThreshold = 0.0004
+    float physxScene:frictionCorrelationDistance = 0.0003
+  }
+  def Scope "Materials"
+  {
+    
+    def Material "Shell" (
+     prepend apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+    )
+    {
+      float physics:staticFriction = 0.36
+      float physics:dynamicFriction = 0.36
+      float physics:restitution = 0
+      token physxMaterial:frictionCombineMode = "multiply"
+    }
+    def Material "MetalShaft" (
+     prepend apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+    )
+    {
+      float physics:staticFriction = 0.72
+      float physics:dynamicFriction = 0.72
+      float physics:restitution = 0
+      token physxMaterial:frictionCombineMode = "multiply"
+    }
+    def Material "LipMetal" (
+     prepend apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+    )
+    {
+      float physics:staticFriction = 0.76
+      float physics:dynamicFriction = 0.76
+      float physics:restitution = 0
+      token physxMaterial:frictionCombineMode = "multiply"
+    }
+    def Material "Base" (
+     prepend apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+    )
+    {
+      float physics:staticFriction = 0.6
+      float physics:dynamicFriction = 0.6
+      float physics:restitution = 0
+      token physxMaterial:frictionCombineMode = "multiply"
+    }
+  }
+  def Xform "FemaleShell" (
+   prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysxRigidBodyAPI"]
+  )
+  {
+    double3 xformOp:translate = (0, 0, 0.087)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+    bool physics:rigidBodyEnabled = true
+    bool physics:kinematicEnabled = true
+    float physics:mass = 0.01
+    bool physxRigidBody:disableGravity = false
+    bool physxRigidBody:enableCCD = false
+    bool physxRigidBody:enableSpeculativeCCD = false
+    int physxRigidBody:solverPositionIterationCount = 32
+    int physxRigidBody:solverVelocityIterationCount = 8
+    float physxRigidBody:sleepThreshold = 0
+    def Cube "WallX0" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.63, 0.65, 0.67)]
+      rel material:binding:physics = </World/Materials/Shell>
+      double size = 1
+      double3 xformOp:translate = (-0.00805, 0, 0.007)
+      double3 xformOp:scale = (0.0025, 0.014, 0.014)
+      uniform token[] xformOpOrder = ["xformOp:translate","xformOp:scale"]
+    }
+    def Cube "WallX2" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.63, 0.65, 0.67)]
+      rel material:binding:physics = </World/Materials/Shell>
+      double size = 1
+      double3 xformOp:translate = (0.00805, 0, 0.007)
+      double3 xformOp:scale = (0.0025, 0.014, 0.014)
+      uniform token[] xformOpOrder = ["xformOp:translate","xformOp:scale"]
+    }
+    def Cube "WallY0" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.63, 0.65, 0.67)]
+      rel material:binding:physics = </World/Materials/Shell>
+      double size = 1
+      double3 xformOp:translate = (0, -0.00505, 0.007)
+      double3 xformOp:scale = (0.0136, 0.0039, 0.014)
+      uniform token[] xformOpOrder = ["xformOp:translate","xformOp:scale"]
+    }
+    def Cube "WallY2" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.63, 0.65, 0.67)]
+      rel material:binding:physics = </World/Materials/Shell>
+      double size = 1
+      double3 xformOp:translate = (0, 0.00505, 0.007)
+      double3 xformOp:scale = (0.0136, 0.0039, 0.014)
+      uniform token[] xformOpOrder = ["xformOp:translate","xformOp:scale"]
+    }
+    def Cube "BlindBottom" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.63, 0.65, 0.67)]
+      rel material:binding:physics = </World/Materials/Shell>
+      double size = 1
+      double3 xformOp:translate = (0, 0, 0.0124)
+      double3 xformOp:scale = (0.015, 0.0076, 0.004)
+      uniform token[] xformOpOrder = ["xformOp:translate","xformOp:scale"]
+    }
+    def Cube "Overmold" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.16, 0.16, 0.18)]
+      rel material:binding:physics = </World/Materials/Shell>
+      double size = 1
+      double3 xformOp:translate = (0, 0, 0.025)
+      double3 xformOp:scale = (0.0186, 0.014, 0.022)
+      uniform token[] xformOpOrder = ["xformOp:translate","xformOp:scale"]
+    }
+    def Cube "Ear0" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.16, 0.16, 0.18)]
+      rel material:binding:physics = </World/Materials/Shell>
+      double size = 1
+      double3 xformOp:translate = (-0.015, 0, 0.006)
+      double3 xformOp:scale = (0.0108, 0.012, 0.0028)
+      uniform token[] xformOpOrder = ["xformOp:translate","xformOp:scale"]
+    }
+    def Cube "Ear2" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.16, 0.16, 0.18)]
+      rel material:binding:physics = </World/Materials/Shell>
+      double size = 1
+      double3 xformOp:translate = (0.015, 0, 0.006)
+      double3 xformOp:scale = (0.0108, 0.012, 0.0028)
+      uniform token[] xformOpOrder = ["xformOp:translate","xformOp:scale"]
+    }
+  }
+  def Xform "Male" (
+   prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysxRigidBodyAPI", "PhysxContactReportAPI"]
+  )
+  {
+    double3 xformOp:translate = (0, 0, 0.061)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+    bool physics:rigidBodyEnabled = true
+    bool physics:kinematicEnabled = false
+    float physics:mass = 0.027
+    bool physxRigidBody:disableGravity = false
+    bool physxRigidBody:enableCCD = true
+    bool physxRigidBody:enableSpeculativeCCD = false
+    int physxRigidBody:solverPositionIterationCount = 32
+    int physxRigidBody:solverVelocityIterationCount = 8
+    float physxRigidBody:sleepThreshold = 0
+    float physxRigidBody:linearDamping = .025
+    float physxRigidBody:angularDamping = .04
+    float physxContactReport:threshold = 0
+    def Mesh "BeveledShaft" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI", "PhysicsMeshCollisionAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.63, 0.65, 0.67)]
+      rel material:binding:physics = </World/Materials/MetalShaft>
+      uniform token physics:approximation = "convexHull"
+      uniform token subdivisionScheme = "none"
+      point3f[] points = [(-0.0062, -0.0024, -0.006), (-0.0062, 0.0024, -0.006), (0.0062, -0.0024, -0.006), (0.0062, 0.0024, -0.006), (-0.0062, -0.0024, 0.0052), (-0.0062, 0.0024, 0.0052), (0.0062, -0.0024, 0.0052), (0.0062, 0.0024, 0.0052), (-0.00582, -0.00202, 0.006), (-0.00582, 0.00202, 0.006), (0.00582, -0.00202, 0.006), (0.00582, 0.00202, 0.006)]
+      int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+      int[] faceVertexIndices = [3, 0, 1, 3, 2, 0, 6, 0, 2, 6, 4, 0, 6, 8, 4, 6, 10, 8, 6, 2, 3, 6, 3, 7, 5, 1, 0, 5, 0, 4, 5, 4, 8, 5, 8, 9, 5, 3, 1, 5, 7, 3, 11, 10, 6, 11, 6, 7, 11, 5, 9, 11, 7, 5, 11, 8, 10, 11, 9, 8]
+    }
+    def Cube "MatingHandle" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.16, 0.16, 0.18)]
+      rel material:binding:physics = </World/Materials/Shell>
+      double size = 1
+      double3 xformOp:translate = (0, 0, -0.013)
+      double3 xformOp:scale = (0.016, 0.01, 0.012)
+      uniform token[] xformOpOrder = ["xformOp:translate","xformOp:scale"]
+    }
+  }
+  def Xform "MeterPlate" (
+   prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysxRigidBodyAPI"]
+  )
+  {
+    double3 xformOp:translate = (0.085, 0, 0.025)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+    bool physics:rigidBodyEnabled = true
+    bool physics:kinematicEnabled = true
+    float physics:mass = 0.05
+    bool physxRigidBody:disableGravity = false
+    bool physxRigidBody:enableCCD = false
+    bool physxRigidBody:enableSpeculativeCCD = false
+    int physxRigidBody:solverPositionIterationCount = 32
+    int physxRigidBody:solverVelocityIterationCount = 8
+    float physxRigidBody:sleepThreshold = 0
+    def Cube "Plate" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.3, 0.5, 0.72)]
+      rel material:binding:physics = </World/Materials/Base>
+      double size = 1
+      double3 xformOp:translate = (0, 0, 0)
+      double3 xformOp:scale = (0.024, 0.024, 0.004)
+      uniform token[] xformOpOrder = ["xformOp:translate","xformOp:scale"]
+    }
+  }
+  def Xform "MeterWeight" (
+   prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysxRigidBodyAPI", "PhysxContactReportAPI"]
+  )
+  {
+    double3 xformOp:translate = (0.085, 0, 0.031)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+    bool physics:rigidBodyEnabled = true
+    bool physics:kinematicEnabled = false
+    float physics:mass = 0.01
+    bool physxRigidBody:disableGravity = false
+    bool physxRigidBody:enableCCD = true
+    bool physxRigidBody:enableSpeculativeCCD = false
+    int physxRigidBody:solverPositionIterationCount = 32
+    int physxRigidBody:solverVelocityIterationCount = 8
+    float physxRigidBody:sleepThreshold = 0
+    float physxContactReport:threshold = 0
+    def Cube "Weight" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.75, 0.6, 0.29)]
+      rel material:binding:physics = </World/Materials/Base>
+      double size = 1
+      double3 xformOp:translate = (0, 0, 0)
+      double3 xformOp:scale = (0.008, 0.008, 0.008)
+      uniform token[] xformOpOrder = ["xformOp:translate","xformOp:scale"]
+    }
+  }
+  def Xform "Lip0" (
+   prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysxRigidBodyAPI"]
+  )
+  {
+    double3 xformOp:translate = (-0.0037, -0.0029872, 0.0919)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+    bool physics:rigidBodyEnabled = true
+    bool physics:kinematicEnabled = false
+    float physics:mass = 0.00048
+    bool physxRigidBody:disableGravity = false
+    bool physxRigidBody:enableCCD = true
+    bool physxRigidBody:enableSpeculativeCCD = false
+    int physxRigidBody:solverPositionIterationCount = 32
+    int physxRigidBody:solverVelocityIterationCount = 8
+    float physxRigidBody:sleepThreshold = 0
+    def Sphere "LippedContact" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.63, 0.65, 0.67)]
+      rel material:binding:physics = </World/Materials/LipMetal>
+      double radius = .00083
+    }
+  }
+  def PhysicsPrismaticJoint "Spring_Lip0" (
+   prepend apiSchemas = ["PhysicsDriveAPI:linear"]
+  )
+  {
+    uniform token physics:axis = "Y"
+    rel physics:body0 = </World/FemaleShell>
+    rel physics:body1 = </World/Lip0>
+    point3f physics:localPos0 = (-0.0037, -0.003, 0.0049)
+    point3f physics:localPos1 = (0,0,0)
+    quatf physics:localRot0 = (0, 0, 0, 1)
+    quatf physics:localRot1 = (0, 0, 0, 1)
+    bool physics:collisionEnabled = false
+    float physics:lowerLimit = -.00065
+    float physics:upperLimit = .0015
+    uniform token drive:linear:physics:type = "force"
+    float drive:linear:physics:stiffness = 1268
+    float drive:linear:physics:damping = .12
+    float drive:linear:physics:targetPosition = -.0000128
+    float drive:linear:physics:targetVelocity = 0
+    float drive:linear:physics:maxForce = .70
+  }
+  def Xform "Lip1" (
+   prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysxRigidBodyAPI"]
+  )
+  {
+    double3 xformOp:translate = (-0.0037, 0.0029872, 0.0919)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+    bool physics:rigidBodyEnabled = true
+    bool physics:kinematicEnabled = false
+    float physics:mass = 0.00048
+    bool physxRigidBody:disableGravity = false
+    bool physxRigidBody:enableCCD = true
+    bool physxRigidBody:enableSpeculativeCCD = false
+    int physxRigidBody:solverPositionIterationCount = 32
+    int physxRigidBody:solverVelocityIterationCount = 8
+    float physxRigidBody:sleepThreshold = 0
+    def Sphere "LippedContact" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.63, 0.65, 0.67)]
+      rel material:binding:physics = </World/Materials/LipMetal>
+      double radius = .00083
+    }
+  }
+  def PhysicsPrismaticJoint "Spring_Lip1" (
+   prepend apiSchemas = ["PhysicsDriveAPI:linear"]
+  )
+  {
+    uniform token physics:axis = "Y"
+    rel physics:body0 = </World/FemaleShell>
+    rel physics:body1 = </World/Lip1>
+    point3f physics:localPos0 = (-0.0037, 0.003, 0.0049)
+    point3f physics:localPos1 = (0,0,0)
+    quatf physics:localRot0 = (1, 0, 0, 0)
+    quatf physics:localRot1 = (1, 0, 0, 0)
+    bool physics:collisionEnabled = false
+    float physics:lowerLimit = -.00065
+    float physics:upperLimit = .0015
+    uniform token drive:linear:physics:type = "force"
+    float drive:linear:physics:stiffness = 1268
+    float drive:linear:physics:damping = .12
+    float drive:linear:physics:targetPosition = -.0000128
+    float drive:linear:physics:targetVelocity = 0
+    float drive:linear:physics:maxForce = .70
+  }
+  def Xform "Lip2" (
+   prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysxRigidBodyAPI"]
+  )
+  {
+    double3 xformOp:translate = (0.0037, -0.0029872, 0.0919)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+    bool physics:rigidBodyEnabled = true
+    bool physics:kinematicEnabled = false
+    float physics:mass = 0.00048
+    bool physxRigidBody:disableGravity = false
+    bool physxRigidBody:enableCCD = true
+    bool physxRigidBody:enableSpeculativeCCD = false
+    int physxRigidBody:solverPositionIterationCount = 32
+    int physxRigidBody:solverVelocityIterationCount = 8
+    float physxRigidBody:sleepThreshold = 0
+    def Sphere "LippedContact" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.63, 0.65, 0.67)]
+      rel material:binding:physics = </World/Materials/LipMetal>
+      double radius = .00083
+    }
+  }
+  def PhysicsPrismaticJoint "Spring_Lip2" (
+   prepend apiSchemas = ["PhysicsDriveAPI:linear"]
+  )
+  {
+    uniform token physics:axis = "Y"
+    rel physics:body0 = </World/FemaleShell>
+    rel physics:body1 = </World/Lip2>
+    point3f physics:localPos0 = (0.0037, -0.003, 0.0049)
+    point3f physics:localPos1 = (0,0,0)
+    quatf physics:localRot0 = (0, 0, 0, 1)
+    quatf physics:localRot1 = (0, 0, 0, 1)
+    bool physics:collisionEnabled = false
+    float physics:lowerLimit = -.00065
+    float physics:upperLimit = .0015
+    uniform token drive:linear:physics:type = "force"
+    float drive:linear:physics:stiffness = 1268
+    float drive:linear:physics:damping = .12
+    float drive:linear:physics:targetPosition = -.0000128
+    float drive:linear:physics:targetVelocity = 0
+    float drive:linear:physics:maxForce = .70
+  }
+  def Xform "Lip3" (
+   prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysxRigidBodyAPI"]
+  )
+  {
+    double3 xformOp:translate = (0.0037, 0.0029872, 0.0919)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+    bool physics:rigidBodyEnabled = true
+    bool physics:kinematicEnabled = false
+    float physics:mass = 0.00048
+    bool physxRigidBody:disableGravity = false
+    bool physxRigidBody:enableCCD = true
+    bool physxRigidBody:enableSpeculativeCCD = false
+    int physxRigidBody:solverPositionIterationCount = 32
+    int physxRigidBody:solverVelocityIterationCount = 8
+    float physxRigidBody:sleepThreshold = 0
+    def Sphere "LippedContact" (
+     prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+      bool physics:collisionEnabled = true
+      float physxCollision:contactOffset = 0.00005
+      float physxCollision:restOffset = 0
+      color3f[] primvars:displayColor = [(0.63, 0.65, 0.67)]
+      rel material:binding:physics = </World/Materials/LipMetal>
+      double radius = .00083
+    }
+  }
+  def PhysicsPrismaticJoint "Spring_Lip3" (
+   prepend apiSchemas = ["PhysicsDriveAPI:linear"]
+  )
+  {
+    uniform token physics:axis = "Y"
+    rel physics:body0 = </World/FemaleShell>
+    rel physics:body1 = </World/Lip3>
+    point3f physics:localPos0 = (0.0037, 0.003, 0.0049)
+    point3f physics:localPos1 = (0,0,0)
+    quatf physics:localRot0 = (1, 0, 0, 0)
+    quatf physics:localRot1 = (1, 0, 0, 0)
+    bool physics:collisionEnabled = false
+    float physics:lowerLimit = -.00065
+    float physics:upperLimit = .0015
+    uniform token drive:linear:physics:type = "force"
+    float drive:linear:physics:stiffness = 1268
+    float drive:linear:physics:damping = .12
+    float drive:linear:physics:targetPosition = -.0000128
+    float drive:linear:physics:targetVelocity = 0
+    float drive:linear:physics:maxForce = .70
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "scope": "CPU static Bullet proxy warm-start distances, no PhysX or new geometry validation",
+  "exact_proxy_urdf_sha256": "b9d65ec1d29897c394d9775902dbb4ec8b0b3ec88f4d9779b77e01b6bb9063c3",
+  "frozen_s1_source_sha256": "821cd3cd3ec9bf836a65f4d5a47450fdb4a032bc52d1cf3dd80f2cfa54543f2a",
+  "static_filter_source": "original D1 used URDF_USE_SELF_COLLISION_EXCLUDE_ALL_PARENTS",
+  "warm_start": {
+    "target_wrist_world_m": [
+      0.38,
+      -0.245,
+      0.9
+    ],
+    "right_joint_q": [
+      0.0980298624,
+      1.36460008,
+      -0.681360733,
+      0.887553649,
+      -1.90818e-05,
+      1.66882757
+    ],
+    "left_arm_q": [
+      -0.1,
+      0.7,
+      -1.6,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "lift_m": 0.38,
+    "each_pair_fingers_m": [
+      0.033,
+      -0.033
+    ]
+  },
+  "pairs": [
+    {
+      "a": "right_arm_link2",
+      "b": "right_arm_link3",
+      "static_separation_mm": -75.584
+    },
+    {
+      "a": "left_arm_link2",
+      "b": "left_arm_link3",
+      "static_separation_mm": -75.571
+    },
+    {
+      "a": "left_arm_link1",
+      "b": "left_arm_link2",
+      "static_separation_mm": -68.93
+    },
+    {
+      "a": "right_arm_link1",
+      "b": "right_arm_link2",
+      "static_separation_mm": -68.925
+    },
+    {
+      "a": "left_arm_link4",
+      "b": "left_arm_link5",
+      "static_separation_mm": -66.974
+    },
+    {
+      "a": "right_arm_link4",
+      "b": "right_arm_link5",
+      "static_separation_mm": -66.974
+    },
+    {
+      "a": "right_arm_link3",
+      "b": "right_arm_link4",
+      "static_separation_mm": -56.428
+    },
+    {
+      "a": "left_arm_link3",
+      "b": "left_arm_link4",
+      "static_separation_mm": -56.418
+    },
+    {
+      "a": "lift_link",
+      "b": "right_arm_link1",
+      "static_separation_mm": -54.21
+    },
+    {
+      "a": "lift_link",
+      "b": "left_arm_link1",
+      "static_separation_mm": -51.806
+    },
+    {
+      "a": "lift_link",
+      "b": "right_arm_link2",
+      "static_separation_mm": -30.518
+    },
+    {
+      "a": "lift_link",
+      "b": "left_arm_link2",
+      "static_separation_mm": -27.682
+    },
+    {
+      "a": "left_arm_link5",
+      "b": "left_arm_link6",
+      "static_separation_mm": -4.762
+    },
+    {
+      "a": "right_arm_link5",
+      "b": "right_arm_link6",
+      "static_separation_mm": -4.761
+    },
+    {
+      "a": "left_arm_link5",
+      "b": "left_arm_gripper_base_link",
+      "static_separation_mm": -2.219
+    },
+    {
+      "a": "right_arm_link5",
+      "b": "right_arm_gripper_base_link",
+      "static_separation_mm": -2.219
+    },
+    {
+      "a": "left_arm_link6",
+      "b": "left_arm_gripper_base_link",
+      "static_separation_mm": -1.0
+    },
+    {
+      "a": "right_arm_link6",
+      "b": "right_arm_gripper_base_link",
+      "static_separation_mm": -1.0
+    }
+  ]
+}

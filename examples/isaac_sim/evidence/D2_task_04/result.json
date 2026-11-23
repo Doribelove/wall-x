@@ -1,0 +1,318 @@
+{
+  "task": "D2",
+  "title": "擦除交班白板的指定栏",
+  "prompt": "Use the orange eraser to wipe the black marks on the left. Keep the colored marks and park the eraser.",
+  "run_id": "D2_task_04",
+  "model_calls": 32,
+  "frames": 257,
+  "control": "Task-space servo using simulated initial object coordinates, gripper and wrist feedback, plus capped WALL-OSS right-hand position residual.",
+  "physics_engine": "PhysX",
+  "physical_scene": "EX001 V6 collision/visual proxy, native task props",
+  "control_period_s": 0.04,
+  "execution_rows_per_chunk": 8,
+  "max_chunks": 130,
+  "camera_inputs": [
+    "face_view",
+    "right_wrist_view"
+  ],
+  "unverified_official_score": true,
+  "isaac_version": [
+    "6.0.1",
+    "rc.7",
+    "6",
+    "0",
+    "1",
+    "rc",
+    "7",
+    "release.42383.32955d8d.gl"
+  ],
+  "mode": "assisted",
+  "grasp_mode": "contact-region breakable grasp",
+  "dt": 0.004,
+  "fixture_sha256": "fbe6b4c56b72b0c46dd568addec9f4fe5802ddebf43466f16e100f87d6df5668",
+  "robot_usd_sha256": "0a5118c799b7fc5012bf4c31b27d32f3910e5edbdba53ab32c3d1b646faf0ff2",
+  "start_joints": [
+    -0.5104334950447083,
+    1.7099906206130981,
+    -1.0895098447799683,
+    0.9606186747550964,
+    -1.6196245269384235e-05,
+    1.0603946447372437,
+    0.49779602885246277,
+    1.5269792079925537,
+    -0.9419541954994202,
+    0.9934375286102295,
+    0.00046485045459121466,
+    1.9189000129699707,
+    0.027006857097148895,
+    -0.026993049308657646,
+    0.02700534462928772,
+    -0.02699459157884121,
+    0.37997671961784363,
+    -0.1600686013698578,
+    0.8602806329727173
+  ],
+  "sim_start_tick": 127,
+  "native_5756_wrist": true,
+  "command_channels": 16,
+  "scene_asset": "D2.usda",
+  "joint_names": [
+    "left_arm_joint1",
+    "left_arm_joint2",
+    "left_arm_joint3",
+    "left_arm_joint4",
+    "left_arm_joint5",
+    "left_arm_joint6",
+    "right_arm_joint1",
+    "right_arm_joint2",
+    "right_arm_joint3",
+    "right_arm_joint4",
+    "right_arm_joint5",
+    "right_arm_joint6",
+    "left_arm_gripper_left_joint",
+    "left_arm_gripper_right_joint",
+    "right_arm_gripper_left_joint",
+    "right_arm_gripper_right_joint",
+    "lift_joint",
+    "head_yaw_joint",
+    "head_pitch_joint"
+  ],
+  "initial_props": {
+    "Board": [
+      [
+        0.4897499680519104,
+        -0.04380000755190849,
+        0.7408429384231567
+      ],
+      [
+        0.9995726943016052,
+        1.2653620991684162e-09,
+        1.3782060460842946e-08,
+        -0.02923061420205669
+      ]
+    ],
+    "EraserProxy": [
+      [
+        0.3900001049041748,
+        -0.2800000011920929,
+        0.73984295129776
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "eraser_board_contact_n": 0.0,
+    "erased_mark_ids": []
+  },
+  "phase_events": [
+    {
+      "phase": "align_eraser",
+      "physics_s": 0.64,
+      "position_error_m": 0.0010072016770150299,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "lower_to_handle",
+      "physics_s": 1.2,
+      "position_error_m": 0.0003135563356847478,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "close_on_handle",
+      "physics_s": 1.92,
+      "position_error_m": 0.00029706176329244416,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "lift_eraser",
+      "physics_s": 2.4,
+      "position_error_m": 0.0015826841786661637,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "above_black_marks",
+      "physics_s": 2.84,
+      "position_error_m": 0.0020220701174996185,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "establish_contact",
+      "physics_s": 3.48,
+      "position_error_m": 0.0007852174967493247,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "wipe_out_0",
+      "physics_s": 4.2,
+      "position_error_m": 0.0008710139086279686,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "wipe_back_0",
+      "physics_s": 4.72,
+      "position_error_m": 0.0003647648746027597,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "wipe_out_1",
+      "physics_s": 5.16,
+      "position_error_m": 0.00026762521668117367,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "wipe_back_1",
+      "physics_s": 5.5600000000000005,
+      "position_error_m": 0.000392048139611775,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "wipe_out_2",
+      "physics_s": 6.0,
+      "position_error_m": 0.0003101293075884776,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "wipe_back_2",
+      "physics_s": 6.44,
+      "position_error_m": 0.00024139304098285024,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "wipe_out_3",
+      "physics_s": 6.88,
+      "position_error_m": 7.729393518375309e-05,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "wipe_back_3",
+      "physics_s": 7.32,
+      "position_error_m": 0.000371471741776221,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "lift_from_board",
+      "physics_s": 7.8,
+      "position_error_m": 9.593749216511384e-05,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "return_to_dock",
+      "physics_s": 8.32,
+      "position_error_m": 0.0023275140883631724,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "lower_into_dock",
+      "physics_s": 8.88,
+      "position_error_m": 0.00029269317364745623,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "release_tool",
+      "physics_s": 9.4,
+      "position_error_m": 0.0002480313708532915,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "retreat",
+      "physics_s": 10.16,
+      "position_error_m": 0.002318907633981089,
+      "outcome": "arrived"
+    }
+  ],
+  "grasp_events": [
+    {
+      "event": "engage_grasp_region",
+      "side": "right",
+      "object": "EraserProxy",
+      "time": 1.44,
+      "phase": "close_on_handle",
+      "pad_frame_center": [
+        0.1462697800862842,
+        3.445966698404665e-05,
+        -6.697274094107975e-05
+      ],
+      "measured_jaws_m": [
+        0.019984319806098938,
+        -0.019983431324362755
+      ]
+    },
+    {
+      "event": "release",
+      "side": "right",
+      "object": "EraserProxy",
+      "time": 8.88,
+      "phase": "release_tool"
+    }
+  ],
+  "status": "horizon_reached",
+  "simulated_seconds": 10.24,
+  "final_props": {
+    "Board": [
+      [
+        0.5007623434066772,
+        -0.04375557228922844,
+        0.740842878818512
+      ],
+      [
+        0.9990285038948059,
+        9.43686016506798e-11,
+        1.7149781849335816e-08,
+        -0.04406867828407703
+      ]
+    ],
+    "EraserProxy": [
+      [
+        0.3899959325790405,
+        -0.28119805455207825,
+        0.73984295129776
+      ],
+      [
+        0.9999998807907104,
+        8.197963979212107e-08,
+        -3.999540752925716e-07,
+        -0.00048828106476371183
+      ]
+    ],
+    "eraser_board_contact_n": 0.0,
+    "erased_mark_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "wrist_travel_m": {
+    "left": 0.12692484279328903,
+    "right": 1.0332090672579202
+  },
+  "final_joints": [
+    -0.40684330463409424,
+    1.8678935766220093,
+    -1.5077238082885742,
+    1.211085557937622,
+    7.376381745416438e-07,
+    1.1639423370361328,
+    -0.07924503087997437,
+    1.3403096199035645,
+    -1.0076216459274292,
+    1.2384231090545654,
+    7.904364792921115e-06,
+    1.4914921522140503,
+    0.04649994522333145,
+    -0.046500056982040405,
+    0.03300529718399048,
+    -0.03299446031451225,
+    0.3799740672111511,
+    -0.1600717008113861,
+    0.8602967858314514
+  ],
+  "encoder_rc": 0
+}

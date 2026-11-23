@@ -19,6 +19,10 @@
 
 </div>
 
+## Doribelove’s Isaac Sim demos
+
+Five EX001 manipulation recordings run the official WALL-OSS-0.5 weights on an RTX 5090. A task controller uses simulator state for both arms and adds a bounded right-hand position correction from the model. Four selected runs met their simulation checks. The towel was folded and placed, with a final corner spread of 28.2 mm against a 15 mm target. The project includes the SDPA patch, runnable scenes and per-step evidence. [Five videos, results and reproduction guide (中文)](examples/isaac_sim/README.md)
+
 ## Building General-Purpose Robots Based on Embodied Foundation Model
 
 We are building embodied foundation models to capture and compress the world's

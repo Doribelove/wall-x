@@ -1,0 +1,8 @@
+{
+  "usd": "usd/ex001_d1_collision_proxy/ex001_d1_fixed_world.usda",
+  "default_prim": "/ex001_robot",
+  "usd_entry_sha256": "0a5118c799b7fc5012bf4c31b27d32f3910e5edbdba53ab32c3d1b646faf0ff2",
+  "input_urdf_sha256": "b9d65ec1d29897c394d9775902dbb4ec8b0b3ec88f4d9779b77e01b6bb9063c3",
+  "physx_fixed_base": true,
+  "runtime_complete": true
+}

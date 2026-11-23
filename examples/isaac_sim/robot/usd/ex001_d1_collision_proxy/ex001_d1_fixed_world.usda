@@ -1,0 +1,34 @@
+#usda 1.0
+(
+    defaultPrim = "ex001_robot"
+    metersPerUnit = 1
+    subLayers = [
+        @./ex001_d1_collision_proxy.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "ex001_robot" (
+    apiSchemas = ["GeomModelAPI", "IsaacRobotAPI", "PhysicsArticulationRootAPI"]
+)
+{
+    over "Physics"
+    {
+        over "chassis_base_joint"
+        {
+            rel physics:body0 = None
+            point3f physics:localPos0 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+        }
+    }
+
+    over "Geometry"
+    {
+        over "base_link" (
+            apiSchemas = None
+        )
+        {
+        }
+    }
+}
+

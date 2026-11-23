@@ -1,0 +1,27 @@
+{
+  "D1": {
+    "title": "按订单分装教具并交付载料碗",
+    "prompt": "Place the two ordered red cubes into the yellow bowl in sequence. Put the specified blue cube into the mint bowl and deliver that bowl.",
+    "steps": 14
+  },
+  "D2": {
+    "title": "擦除交班白板的指定栏",
+    "prompt": "Erase the black check in the left column, preserve the right-hand mark, and park the marker.",
+    "steps": 8
+  },
+  "D3": {
+    "title": "为周转空瓶配盖封存",
+    "prompt": "Cap the open bottle with its matching threaded lid and leave it upright in the finished-goods area.",
+    "steps": 10
+  },
+  "D4": {
+    "title": "将客房方巾对折两次并收纳",
+    "prompt": "Fold the orange-loop towel twice at right angles and place the four-layer bundle in the storage area.",
+    "steps": 10
+  },
+  "D5": {
+    "title": "为离线检修工位插接日志盘",
+    "prompt": "Insert the black-and-red service drive into the flanged USB-A socket. Leave the joined parts resting in the work area.",
+    "steps": 8
+  }
+}

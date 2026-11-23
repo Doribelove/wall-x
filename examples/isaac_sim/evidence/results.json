@@ -1,0 +1,172 @@
+{
+  "D1": {
+    "task": "D1",
+    "run": "D1_task_02",
+    "sim_s": 21.12,
+    "model_calls": 66,
+    "executed_action_rows": 528,
+    "frames": 529,
+    "video_sha256": "1d584db78cdb39d1e50be35abb05cc69f712100d57b4da4f68c21067f13b5fec",
+    "video": {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 540,
+      "r_frame_rate": "25/1",
+      "duration": "21.160000",
+      "nb_read_frames": "529"
+    },
+    "all_action_rows_exact": true,
+    "lift_s": [
+      2.2800000000000002,
+      7.72,
+      13.24
+    ],
+    "targets_in_correct_bowls": 3,
+    "bowl_position_error_mm": 7.122489088101219,
+    "remaining_cube_z_error_mm": 4.005432130416153e-05,
+    "sim_pass": true
+  },
+  "D2": {
+    "task": "D2",
+    "run": "D2_task_04",
+    "sim_s": 10.24,
+    "model_calls": 32,
+    "executed_action_rows": 256,
+    "frames": 257,
+    "video_sha256": "d52868a6548aa2391c6db035dce84fae6b94c9869e1b4d975c73c6372e49e23d",
+    "video": {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 540,
+      "r_frame_rate": "25/1",
+      "duration": "10.280000",
+      "nb_read_frames": "257"
+    },
+    "all_action_rows_exact": true,
+    "targets_erased": 8,
+    "protected_remaining": 6,
+    "tool_dock_error_mm": 1.198060625206094,
+    "board_shift_mm": 11.012465003367701,
+    "peak_eraser_board_contact_N": 20.297903060913086,
+    "sim_pass": true
+  },
+  "D3": {
+    "task": "D3",
+    "run": "D3_assembly_09",
+    "sim_s": 53.44,
+    "model_calls": 167,
+    "executed_action_rows": 1336,
+    "frames": 1337,
+    "video_sha256": "85e23b2e79f4a703f5f16369805efcee35fe6b35f67aea245cc2f483ab27506c",
+    "video": {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 540,
+      "r_frame_rate": "25/1",
+      "duration": "53.480000",
+      "nb_read_frames": "1337"
+    },
+    "all_action_rows_exact": true,
+    "turns": 3.775529772798552,
+    "seat_detected": true,
+    "height_error_mm": 0.030534553566247125,
+    "opposed_lip_height_difference_mm": 1.1213002509192941e-05,
+    "upright_deg": 2.0930518217647736e-05,
+    "delivery_error_mm": 0.2604899151904175,
+    "after_release_s": 2.1999999999999957,
+    "sim_pass": true
+  },
+  "D4": {
+    "task": "D4",
+    "run": "D4_carry_14",
+    "sim_s": 50.56,
+    "model_calls": 158,
+    "executed_action_rows": 1264,
+    "frames": 1265,
+    "video_sha256": "d02dc7ddf0905624c76184663c07753e39ea0f672aa2f7772e3c992d0378a7ca",
+    "video": {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 540,
+      "r_frame_rate": "25/1",
+      "duration": "50.600000",
+      "nb_read_frames": "1265"
+    },
+    "all_action_rows_exact": true,
+    "nodes": 225,
+    "first_fold_mm": [
+      150.00543325184617,
+      300.00432732273634
+    ],
+    "fold_angle_deg": 90.20813226314345,
+    "second_fold_corner_spread_mm": 4.142488951703321,
+    "footprint_mm": [
+      148.92334363977693,
+      150.1786221646929
+    ],
+    "original_corner_spread_mm": 28.21638303246747,
+    "center_m": [
+      0.4270339204205407,
+      0.11664311273230446,
+      0.6693373881445991
+    ],
+    "storage_center_inside": true,
+    "storage_center_xy_m": [
+      0.43,
+      0.116
+    ],
+    "storage_center_error_mm": 3.034999515343845,
+    "transported_mm": 75.02904788072071,
+    "both_released_s": 8.520000000000003,
+    "last_two_seconds_max_corner_spread_mm": 28.437472931146285,
+    "last_two_seconds_side_range_mm": [
+      [
+        148.75470007803014,
+        150.1786221646929
+      ],
+      [
+        148.93047339493603,
+        150.55140060206529
+      ]
+    ],
+    "pinch_events": [
+      "grip_folded_stack",
+      "pinch_first_edge",
+      "pinch_second_edge"
+    ],
+    "sim_pass": false
+  },
+  "D5": {
+    "task": "D5",
+    "run": "D5_hold_17",
+    "sim_s": 17.92,
+    "model_calls": 56,
+    "executed_action_rows": 448,
+    "frames": 449,
+    "video_sha256": "d39842c80b4098a9e51e86f42d39eda78e901b8740d3df078bf09662fc49d17d",
+    "video": {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 540,
+      "r_frame_rate": "25/1",
+      "duration": "17.960000",
+      "nb_read_frames": "449"
+    },
+    "all_action_rows_exact": true,
+    "engaged": true,
+    "final_depth_mm": 9.562265433536318,
+    "terminal_radial_error_mm": 0.0004822569142228781,
+    "axes_tilt_deg": 0.000490062354409467,
+    "sim_shoulder_deviation_from_nominal_mm": [
+      0.06222153183316337,
+      0.062309335239472574
+    ],
+    "right_release_s": 11.8,
+    "left_release_s": 14.72,
+    "one_hand_hold_s": 2.92,
+    "min_one_hand_depth_mm": 9.563039470125211,
+    "both_released_s": 3.200000000000001,
+    "minimum_depth_after_hand_release_mm": 9.562088613044226,
+    "sim_pass": true
+  }
+}

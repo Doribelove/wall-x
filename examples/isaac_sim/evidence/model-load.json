@@ -1,0 +1,56 @@
+{
+  "model": "X-Square-Robot/wall-oss-0.5",
+  "model_sha256": "37f8f327d3f9c27f056ed078db43c0e39b8caf3df0dc0163cdb8cf92c167968a",
+  "model_bytes": 8331486672,
+  "source_commit": "ce2a1ae31d9ee1028b97ca40e3f66034cf8c0e5f",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.10.0+cu128",
+  "state_layout": [
+    [
+      "follow_left_ee_cartesian_pos",
+      3
+    ],
+    [
+      "follow_left_ee_rotation_6D",
+      6
+    ],
+    [
+      "follow_left_gripper",
+      1
+    ],
+    [
+      "follow_right_ee_cartesian_pos",
+      3
+    ],
+    [
+      "follow_right_ee_rotation_6D",
+      6
+    ],
+    [
+      "follow_right_gripper",
+      1
+    ],
+    [
+      "velocity_decomposed",
+      3
+    ],
+    [
+      "height",
+      1
+    ],
+    [
+      "head_actions",
+      2
+    ]
+  ],
+  "norm": "ex_normal",
+  "cameras": [
+    "face_view",
+    "right_wrist_view"
+  ],
+  "vision_attention": "sdpa",
+  "parameters": 4162224832,
+  "verified_parameter_tensors": 1061,
+  "verified_parameter_elements": 4162224832,
+  "lm_head_tied_to_input": true
+}

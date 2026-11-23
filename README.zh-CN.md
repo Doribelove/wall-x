@@ -2,6 +2,10 @@
 
 Wall-X 开源仓库提供 WALL 系列开源具身基础模型的训练与推理代码，当前公开范围包含 LeRobot 数据链路、Qwen2.5 模型、Wall-OSS-0.5 训练配置、最小 fake inference、LIBERO 仿真评测、open-loop WebSocket 评测，以及安装时编译的导出 CUDA 算子源码。
 
+## Doribelove 的 Isaac Sim 五项演示
+
+使用官方 WALL-OSS-0.5 预训练权重，在 RTX 5090 上完成 EX001 双臂仿真接入。五段录像覆盖教具分装、定向擦板、旋盖、折巾和 USB 插接。四项通过本项目仿真检查，折巾完成搬运，最终四角偏差 28.2 mm。仓库提供推理补丁、任务控制代码、录像和逐步动作记录。[改动说明、五段视频与复现方法](examples/isaac_sim/README.md)
+
 ## 最新动态
 
 - 2026 年 6 月：Wall-X 1.1.0 更新 Wall-OSS-0.5 训练与推理栈，包含公开 serving/evaluation runtime、DMuon 训练支持，以及安装期 CUDA 算子编译。

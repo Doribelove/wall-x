@@ -1,0 +1,373 @@
+{
+  "task": "D5",
+  "title": "为离线检修工位插接日志盘",
+  "prompt": "Insert the black-and-red service drive into the flanged USB-A socket. Leave the joined parts resting in the work area.",
+  "run_id": "D5_hold_17",
+  "model_calls": 56,
+  "frames": 449,
+  "control": "Task-space servo using simulated initial object coordinates, gripper and wrist feedback, plus capped WALL-OSS right-hand position residual.",
+  "physics_engine": "PhysX",
+  "physical_scene": "EX001 V6 collision/visual proxy, native task props",
+  "control_period_s": 0.04,
+  "execution_rows_per_chunk": 8,
+  "max_chunks": 120,
+  "camera_inputs": [
+    "face_view",
+    "right_wrist_view"
+  ],
+  "unverified_official_score": true,
+  "isaac_version": [
+    "6.0.1",
+    "rc.7",
+    "6",
+    "0",
+    "1",
+    "rc",
+    "7",
+    "release.42383.32955d8d.gl"
+  ],
+  "mode": "assisted",
+  "grasp_mode": "contact-region breakable grasp",
+  "dt": 0.0008,
+  "fixture_sha256": "b51b7406185594c38ea796fd9cd444ad6a07ec957f745730a1ef494b2d1c2aa4",
+  "robot_usd_sha256": "0a5118c799b7fc5012bf4c31b27d32f3910e5edbdba53ab32c3d1b646faf0ff2",
+  "start_joints": [
+    -0.49617478251457214,
+    1.7014291286468506,
+    -0.9487043619155884,
+    0.8273510932922363,
+    -2.3229677026392892e-05,
+    1.0746787786483765,
+    0.5907295942306519,
+    1.8052167892456055,
+    -0.8858967423439026,
+    0.6580100059509277,
+    0.0006771556800231338,
+    1.9189000129699707,
+    0.02700541540980339,
+    -0.02699456550180912,
+    0.027003977447748184,
+    -0.026996007189154625,
+    0.37999454140663147,
+    -0.1599999964237213,
+    0.8600000143051147
+  ],
+  "sim_start_tick": 607,
+  "native_5756_wrist": true,
+  "command_channels": 16,
+  "scene_asset": "fixture.usda",
+  "joint_names": [
+    "left_arm_joint1",
+    "left_arm_joint2",
+    "left_arm_joint3",
+    "left_arm_joint4",
+    "left_arm_joint5",
+    "left_arm_joint6",
+    "right_arm_joint1",
+    "right_arm_joint2",
+    "right_arm_joint3",
+    "right_arm_joint4",
+    "right_arm_joint5",
+    "right_arm_joint6",
+    "left_arm_gripper_left_joint",
+    "left_arm_gripper_right_joint",
+    "right_arm_gripper_left_joint",
+    "right_arm_gripper_right_joint",
+    "lift_joint",
+    "head_yaw_joint",
+    "head_pitch_joint"
+  ],
+  "initial_props": {
+    "BenchAssembly/ServiceDrive": [
+      [
+        0.41066762804985046,
+        -0.19903945922851562,
+        0.6549999713897705
+      ],
+      [
+        -0.7020216936575435,
+        0.7020218366370704,
+        0.0846489667172086,
+        -0.08464889221140269
+      ]
+    ],
+    "BenchAssembly/FemaleShell": [
+      [
+        0.5267837643623352,
+        -0.09095937758684158,
+        0.6570000648498535
+      ],
+      [
+        -0.7066070437431337,
+        0.7066073059288279,
+        0.026576352268297576,
+        -0.0265762758998439
+      ]
+    ],
+    "BenchAssembly/DistalMale": [
+      [
+        0.41628578305244446,
+        -0.11035989224910736,
+        0.6554999947547913
+      ],
+      [
+        0.6568325161933899,
+        0.6568325215816088,
+        0.26186079001663215,
+        0.26186067080734166
+      ]
+    ]
+  },
+  "phase_events": [
+    {
+      "phase": "locate",
+      "physics_s": 0.8,
+      "position_error_m": 0.00040201019677926206,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "approach",
+      "physics_s": 1.32,
+      "position_error_m": 0.0005360721578803824,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "close",
+      "physics_s": 2.0,
+      "position_error_m": 0.00024979805109044337,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "test_lift",
+      "physics_s": 2.48,
+      "position_error_m": 0.00020188342658078665,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "clear",
+      "physics_s": 2.96,
+      "position_error_m": 0.0011542525047008843,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "approach_above",
+      "physics_s": 3.7600000000000002,
+      "position_error_m": 0.0012309425669218199,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "align",
+      "physics_s": 4.28,
+      "position_error_m": 0.002060460027964345,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "enter",
+      "physics_s": 4.640000000000001,
+      "position_error_m": 9.456012017613715e-05,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "press_1",
+      "physics_s": 5.84,
+      "position_error_m": 3.350592458246212e-05,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "press_2",
+      "physics_s": 7.0,
+      "position_error_m": 0.00012258729719833675,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "press_3",
+      "physics_s": 8.200000000000001,
+      "position_error_m": 0.00013756374998375213,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "press_4",
+      "physics_s": 9.440000000000001,
+      "position_error_m": 0.0001322312563337034,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "press_5",
+      "physics_s": 10.68,
+      "position_error_m": 0.00016945099682583018,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "press_6",
+      "physics_s": 11.76,
+      "position_error_m": 0.0007204495013000402,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "release_drive",
+      "physics_s": 13.96,
+      "position_error_m": 0.00019326131825862336,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "lower_assembly",
+      "physics_s": 14.680000000000001,
+      "position_error_m": 0.0018192785502518798,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "release_base",
+      "physics_s": 15.24,
+      "position_error_m": 0.00012529760969507106,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "inspect",
+      "physics_s": 17.84,
+      "position_error_m": 0.000155386278349697,
+      "outcome": "arrived"
+    },
+    {
+      "phase": "inspect",
+      "physics_s": 17.880000000000003,
+      "position_error_m": 0.00015492842249735254,
+      "outcome": "arrived"
+    }
+  ],
+  "grasp_events": [
+    {
+      "event": "engage_grasp_region",
+      "side": "right",
+      "object": "BenchAssembly/ServiceDrive",
+      "time": 1.4400000000000002,
+      "phase": "close",
+      "pad_frame_center": [
+        0.16121643596029087,
+        4.25262370859943e-05,
+        -3.602112224232088e-05
+      ],
+      "measured_jaws_m": [
+        0.025641804561018944,
+        -0.025639113038778305
+      ]
+    },
+    {
+      "event": "engage_grasp_region",
+      "side": "left",
+      "object": "BenchAssembly/FemaleShell",
+      "time": 1.48,
+      "phase": "close",
+      "pad_frame_center": [
+        0.16283663971012247,
+        -5.255600286063691e-06,
+        -0.004468716598903438
+      ],
+      "measured_jaws_m": [
+        0.02727135457098484,
+        -0.027270933613181114
+      ]
+    },
+    {
+      "event": "release",
+      "side": "right",
+      "object": "BenchAssembly/ServiceDrive",
+      "time": 11.8,
+      "phase": "release_drive"
+    },
+    {
+      "event": "release",
+      "side": "left",
+      "object": "BenchAssembly/FemaleShell",
+      "time": 14.72,
+      "phase": "release_base"
+    }
+  ],
+  "connector_events": [
+    {
+      "event": "measured_mating_entry",
+      "time": 4.4,
+      "phase": "enter",
+      "radial_m": 0.0006024577951508374,
+      "tilt_deg": 0.005590550974799604,
+      "relative_z": -0.0082755315493096
+    },
+    {
+      "event": "seat",
+      "time": 11.32,
+      "turns": -0.0,
+      "depth": 0.009511665298771612,
+      "radial_m": 8.128630714517568e-07
+    }
+  ],
+  "seat_detected": true,
+  "physical_turns": -0.0,
+  "status": "horizon_reached",
+  "simulated_seconds": 17.92,
+  "final_props": {
+    "BenchAssembly/ServiceDrive": [
+      [
+        0.5277285575866699,
+        -0.08736497908830643,
+        0.6569997072219849
+      ],
+      [
+        0.706597312872401,
+        -0.7065845130905913,
+        -0.02700734696912255,
+        0.027003083374376544
+      ]
+    ],
+    "BenchAssembly/FemaleShell": [
+      [
+        0.5280005931854248,
+        -0.09091684222221375,
+        0.6570001244544983
+      ],
+      [
+        0.7065955996513366,
+        -0.706586417557162,
+        -0.027001930286892455,
+        0.02700349677145635
+      ]
+    ],
+    "BenchAssembly/DistalMale": [
+      [
+        0.41628578305244446,
+        -0.11035989224910736,
+        0.6554999947547913
+      ],
+      [
+        0.6568325161933899,
+        0.6568325215816088,
+        0.26186079001663215,
+        0.26186067080734166
+      ]
+    ]
+  },
+  "wrist_travel_m": {
+    "left": 0.3926703849676527,
+    "right": 0.5574443988667271
+  },
+  "final_joints": [
+    -0.5683915019035339,
+    1.9637080430984497,
+    -1.308735728263855,
+    0.4407195746898651,
+    -0.5476875305175781,
+    0.7915565967559814,
+    0.4412613809108734,
+    2.017091751098633,
+    -1.691840648651123,
+    1.2507028579711914,
+    -4.15760041505564e-05,
+    1.918729305267334,
+    0.03299834579229355,
+    -0.033001694828271866,
+    0.029003223404288292,
+    -0.02899678610265255,
+    0.3799947202205658,
+    -0.1599999964237213,
+    0.8600000739097595
+  ],
+  "encoder_rc": 0
+}

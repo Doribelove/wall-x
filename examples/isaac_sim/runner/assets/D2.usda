@@ -1,0 +1,229 @@
+#usda 1.0
+(
+ defaultPrim = "World"
+ upAxis = "Z"
+ metersPerUnit = 1
+ kilogramsPerUnit = 1
+ timeCodesPerSecond = 250
+)
+def Xform "World" {
+def PhysicsScene "Physics" {
+  vector3f physics:gravityDirection = (0,0,-1)
+  float physics:gravityMagnitude = 9.81
+}
+def Scope "Materials" {
+def Material "Table" (prepend apiSchemas = ["PhysicsMaterialAPI"]) {
+  float physics:staticFriction = 0.475
+  float physics:dynamicFriction = 0.475
+  float physics:restitution = 0
+}
+def Material "Board" (prepend apiSchemas = ["PhysicsMaterialAPI"]) {
+  float physics:staticFriction = 0.64
+  float physics:dynamicFriction = 0.64
+  float physics:restitution = 0
+}
+def Material "Tool" (prepend apiSchemas = ["PhysicsMaterialAPI"]) {
+  float physics:staticFriction = 1.2
+  float physics:dynamicFriction = 1.2
+  float physics:restitution = 0
+}
+}
+def Cube "Table" (prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]) {
+  double size = 1
+  double3 xformOp:translate = (0.435,-0.075,0.70984304)
+  float3 xformOp:scale = (0.34,0.704,0.05)
+  uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+  color3f[] primvars:displayColor = [(0.56,0.37,0.24)]
+  bool physics:collisionEnabled = true
+  rel material:binding:physics = </World/Materials/Table>
+}
+def Xform "Board" (prepend apiSchemas = ["PhysicsRigidBodyAPI","PhysicsMassAPI"]) {
+  double3 xformOp:translate = (0.48975,-0.0438,0.74184304)
+  float xformOp:rotateZ = -3.35
+  uniform token[] xformOpOrder = ["xformOp:translate","xformOp:rotateZ"]
+  bool physics:rigidBodyEnabled = true
+  float physics:mass = 0.65
+
+  def Cube "Slab" (prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]) {
+    double size = 1
+    double3 xformOp:translate = (0,0,0)
+    float3 xformOp:scale = (0.079,0.564,0.012)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.7,0.86,0.94)]
+    bool physics:collisionEnabled = true
+    rel material:binding:physics = </World/Materials/Board>
+  }
+
+  def Cube "TagGreen" {
+    double size = 1
+    double3 xformOp:translate = (0.023,-0.245,0.0064)
+    float3 xformOp:scale = (0.01,0.01,0.0008)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.02,0.9,0.17)]
+  }
+
+  def Cube "TagMagenta" {
+    double size = 1
+    double3 xformOp:translate = (0.023,0.245,0.0064)
+    float3 xformOp:scale = (0.01,0.01,0.0008)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.82,0.06,0.82)]
+  }
+
+  def Cube "Mark00" {
+    double size = 1
+    double3 xformOp:translate = (-0.0185,-0.242,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.12,0.15,0.18)]
+  }
+
+  def Cube "Mark01" {
+    double size = 1
+    double3 xformOp:translate = (-0.0185,-0.222,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.12,0.15,0.18)]
+  }
+
+  def Cube "Mark02" {
+    double size = 1
+    double3 xformOp:translate = (-0.0065,-0.242,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.12,0.15,0.18)]
+  }
+
+  def Cube "Mark03" {
+    double size = 1
+    double3 xformOp:translate = (-0.0065,-0.222,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.12,0.15,0.18)]
+  }
+
+  def Cube "Mark04" {
+    double size = 1
+    double3 xformOp:translate = (0.0055,-0.242,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.12,0.15,0.18)]
+  }
+
+  def Cube "Mark05" {
+    double size = 1
+    double3 xformOp:translate = (0.0055,-0.222,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.12,0.15,0.18)]
+  }
+
+  def Cube "Mark06" {
+    double size = 1
+    double3 xformOp:translate = (0.0155,-0.242,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.12,0.15,0.18)]
+  }
+
+  def Cube "Mark07" {
+    double size = 1
+    double3 xformOp:translate = (0.0155,-0.222,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.12,0.15,0.18)]
+  }
+
+  def Cube "Mark08" {
+    double size = 1
+    double3 xformOp:translate = (-0.0195,-0.262,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.77,0.18,0.16)]
+  }
+
+  def Cube "Mark09" {
+    double size = 1
+    double3 xformOp:translate = (-0.0195,-0.202,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.77,0.18,0.16)]
+  }
+
+  def Cube "Mark10" {
+    double size = 1
+    double3 xformOp:translate = (-0.0015,-0.262,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.77,0.18,0.16)]
+  }
+
+  def Cube "Mark11" {
+    double size = 1
+    double3 xformOp:translate = (-0.0015,-0.202,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.77,0.18,0.16)]
+  }
+
+  def Cube "Mark12" {
+    double size = 1
+    double3 xformOp:translate = (0.0175,-0.262,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.77,0.18,0.16)]
+  }
+
+  def Cube "Mark13" {
+    double size = 1
+    double3 xformOp:translate = (0.0175,-0.202,0.0062)
+    float3 xformOp:scale = (0.0046,0.0046,0.0005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.77,0.18,0.16)]
+  }
+}
+def Xform "EraserProxy" (prepend apiSchemas = ["PhysicsRigidBodyAPI","PhysicsMassAPI"]) {
+  double3 xformOp:translate = (0.39,-0.28,0.74084304)
+  float xformOp:rotateZ = 0.0
+  uniform token[] xformOpOrder = ["xformOp:translate","xformOp:rotateZ"]
+  bool physics:rigidBodyEnabled = true
+  float physics:mass = 0.055
+
+  def Cube "Pad" (prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]) {
+    double size = 1
+    double3 xformOp:translate = (0,0,0)
+    float3 xformOp:scale = (0.032,0.044,0.01)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.95,0.48,0.09)]
+    bool physics:collisionEnabled = true
+    rel material:binding:physics = </World/Materials/Tool>
+  }
+
+  def Cube "Grip" (prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]) {
+    double size = 1
+    double3 xformOp:translate = (0,0,0.014)
+    float3 xformOp:scale = (0.02,0.024,0.018)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    color3f[] primvars:displayColor = [(0.8,0.31,0.08)]
+    bool physics:collisionEnabled = true
+    rel material:binding:physics = </World/Materials/Tool>
+  }
+}
+def Camera "D2_BoardInspection" {
+  token projection = "perspective"
+  float focalLength = 16
+  float horizontalAperture = 16
+  float verticalAperture = 16
+  float2 clippingRange = (0.025,2)
+  double3 xformOp:translate = (0.49,-0.044,1.48)
+  uniform token[] xformOpOrder = ["xformOp:translate"]
+}
+def DomeLight "D2_Dome" {
+  float inputs:intensity = 350
+}
+def DistantLight "D2_Distant" {
+  float inputs:intensity = 2800
+  float xformOp:rotateX = 25
+  uniform token[] xformOpOrder = ["xformOp:rotateX"]
+}
+}
